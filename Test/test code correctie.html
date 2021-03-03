@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+    <title>DND with alerts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        #answer1Box,#answer2Box,#answer3Box,#answer4Box
+        {
+            float:left;
+            width: 125px;
+            height: 40px;
+        }
+
+        #target1, #target2, #target3, #target4
+        {
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            margin-top: 30px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+
+
+    </style>
+    <script src="modernizr-latest.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+
+        function allowDrop(ev){
+            ev.preventDefault();
+        }
+
+        function drag(ev){
+            ev.dataTransfer.setData("content", ev.target.id);
+        }
+
+        function drop(ev){
+            ev.preventDefault();
+            var image = ev.dataTransfer.getData("content");
+            ev.target.appendChild(document.getElementById(image));
+
+            if($('#target1').find('#answer1').length == 1)
+            {
+                alert("CORRECT!");
+            } else {
+                alert("Wrong!");
+            }
+        }
+    </script>
+</head>
+
+<body>
+<div id="answerBoxes">
+    <div id="target1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    <div id="target2" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    <div id="target3" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    <div id="target4" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+</div> <!-- end of answerBoxes -->
+<div id="whatsWhatContent">
+    <div id="answers">
+        <div id="answer1Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="answer1" src="fall1.png"  draggable="true"    ondragstart="drag(event)" alt="Flower answer box draggable"/>
+        </div>
+
+
+        <div id="answer2Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="answer2" src="files.png"  draggable="true"
+                 ondragstart="drag(event)" alt="Stem answer box draggable">
+        </div>
+
+        <div id="answer3Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="answer3" src="HOME.png"  draggable="true" ondragstart="drag(event)" alt="Root answer box draggable">
+        </div>
+
+        <div id="answer4Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="answer4" src="web.png"  draggable="true" ondragstart="drag(event)" alt="Leaf answer box draggable">
+        </div>
+
+
+</body>
+</html>
