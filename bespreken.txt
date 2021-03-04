@@ -4,5 +4,3 @@ uitleg vragen over correctie methode in javascript of php als misschien mogenlij
 
 kijken of wat we nu hebben de goede richting op gaat
 
-
-
