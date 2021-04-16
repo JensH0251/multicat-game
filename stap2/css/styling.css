@@ -1,0 +1,64 @@
+/*Container*/
+#containerDiv{
+    position: absolute;
+    float: left;
+    width: 65%;
+    height: 75%;
+    overflow: hidden; /*Belangrijk: zorgt ervoor dat het beweegbare element niet buiten de container kan gaan*/
+    margin: calc((100% - 75%) / 5) calc((100% - 65%) / 2); /*Centert de containerDiv*/
+    background: #dddddd;
+    border: 3px solid black;
+}
+
+
+/*Beweegbare elementen*/
+.boxElement{
+    position: absolute; /*Belangrijk! Dit is nodig voor het maken van het beweegbare element*/
+    float: left;
+    text-align: center;
+    font-size: 1vw;
+    border: 2px dashed black;
+}
+
+.boxElement p{
+    margin-top: calc(50% - 1vw); /*Centert tekst*/
+    pointer-events: none; /*Zorgt ervoor dat je de DIV kan verslepen, ook als je op de tekst klikt (anders lukt het niet)*/
+    user-select: none;
+    font-weight: bold;
+    font-family: Arial, serif;
+    text-decoration: underline;
+    color: white;
+}
+
+/*Opmaak individuele boxen*/
+#boxElement1{
+    width: 250px;
+    height: 250px;
+    margin: calc((100% - 250px) / 5) calc((100% - 250px) / 2); /*Zorgt ervoor dat de box in het midden van de container is gecentered*/
+    background: #005aff;
+}
+
+#boxElement1:hover{
+    cursor: pointer;
+}
+
+#boxElement1:active{
+    background: #4484ff;
+}
+
+/*
+#boxElement2{
+    width: 250px;
+    height: 250px;
+    margin: calc((100% - 250px) / 5) calc((100% - 250px) / 2);
+    background: #ff3232;
+}
+
+#boxElement2:hover{
+    cursor: pointer;
+}
+
+#boxElement2:active{
+    background: #ff6767;
+}
+*/

@@ -1,0 +1,103 @@
+*{
+    -webkit-box-sizing: border-box;
+}
+
+#mainDiv{
+    float: left;
+    width: 20%;
+    height: 40%;
+}
+
+#mainListDiv{
+    float: left;
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+    background: rgba(200, 200, 200, 1);
+    border: 1px solid black;
+}
+
+#mainTitle{
+    float: left;
+    height: 15%;
+    width: 100%;
+    overflow: auto;
+    background: rgba(130, 130, 130, 1);
+    color: black;
+    padding-top: 1.5%;
+    text-align: center;
+    font-family: "Arial Black", serif;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 1.15vw;
+    border-bottom: 2px solid black;
+}
+
+#linkListDiv{
+    float: left;
+    height: 75%;
+    width: 100%;
+    /*background: red;*/
+}
+
+#linkList{
+    float: left;
+    width: 100%;
+    min-height: 25%;
+    padding-left: 0;
+    margin-top: 7.5%;
+    list-style: none;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+}
+
+.link{
+    display: inline-block;
+    width: 100%;
+    background: rgba(175, 175, 175, 1);
+    border-top: 1px solid black;
+}
+
+.link:hover{
+    background: rgba(115, 115, 115, 1);
+}
+
+.link:active{
+    background: rgba(85, 85, 85, 1);
+}
+
+.link a{
+    margin-left: 15px;
+    padding: 6px 0 6px 0; /*top right bottom left*/
+    display: block;
+    color: rgba(15, 15, 15, 1);
+    font-size: 0.85vw;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link a::before{
+    content: "- ";
+}
+
+.link a:hover::before{
+    content: "> ";
+}
+
+.link a:active{
+    color: rgba(200, 200, 200, 1);
+}
+
+#footer{
+    float: left;
+    height: 7.5%;
+    width: 100%;
+    background: rgba(15, 15, 15, 1);
+    color: white;
+    font-family: Arial, serif;
+    font-size: 0.88vw;
+    text-align: center;
+    vertical-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
