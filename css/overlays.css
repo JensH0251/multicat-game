@@ -1,0 +1,285 @@
+/*Backdrop*/
+.backdrop{
+    position: fixed;
+    float: left;
+    width: 1720px;
+    height: 920px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+/*====================================================================================================================*/
+
+/*Continue-DIV*/
+#continueDivWrapper{
+    float: left;
+    width: 35%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #929292;
+    border: 4px solid black;
+}
+
+#continueDiv{
+    float: left;
+    width: 65%;
+    height: 50%;
+    text-align: center;
+    border: 2px solid black;
+}
+
+#continueSpan{
+    float: left;
+    width: 100%;
+    height: 35%;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    font-size: 150%;
+    background: white;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#continueButtonYes{
+    float: left;
+    height: 65%;
+    width: 100%;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    font-size: 125%;
+    background: #63ff63;
+}
+
+#continueButtonYes:hover{
+    cursor: pointer;
+    background: #a2ffa2;
+}
+
+/*====================================================================================================================*/
+/*====================================================================================================================*/
+/*====================================================================================================================*/
+
+
+/*Scorescreen*/
+#scoreScreenWrapper{
+    float: left;
+    width: 35%;
+    height: 75%;
+    background: white;
+    border: 2px solid black;
+}
+
+/*====================================================================================================================*/
+
+/*Header*/
+#scoreScreenHeader{
+    float: left;
+    width: 100%;
+    height: 6.5%;
+    overflow: auto;
+    background: #d4d4d4;
+    text-align: center;
+    font-family: "Arial Black", sans-serif;
+    border: 1px solid black;
+}
+
+/*====================================================================================================================*/
+
+/*Body*/
+#scoreScreenBody{
+    float: left;
+    width: 100%;
+    height: 93.5%;
+    border: 1px solid black;
+}
+
+/*Body - header*/
+#scoresHeader{
+    float: left;
+    height: 5%;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Arial Black", sans-serif;
+    font-size: 135%;
+    background: #b9e0dd;
+    border: 1px solid black;
+}
+
+/*Body - body*/
+#scoresBody{
+    float: left;
+    height: 81.5%;
+    width: 100%;
+    overflow: auto;
+    background: #d0f5f2;
+    border: 1px solid black;
+}
+
+#addScoreStatus{
+    float: left;
+    height: 3.5%;
+    width: 100%;
+    color: red;
+    text-align: center;
+    font-style: italic;
+    font-family: Arial, sans-serif;
+}
+
+/*Add score*/
+#addScore{
+    float: left;
+    height: 5%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+
+/*Add score - form*/
+#addScoreForm{
+    float: left;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#nameInputLabel{
+    float: left;
+    height: 85%;
+    width: 15%;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+}
+
+#nameInput{
+    float: left;
+    height: 85%;
+    width: 60%;
+}
+
+#submitNameButton{
+    float: left;
+    height: 85%;
+    width: 25%;
+    border: 2px solid black;
+}
+
+/*====================================================================================================================*/
+
+/*Opnieuw/Afsluiten buttons*/
+#scoreButtonDiv{
+    float: left;
+    height: 5%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.scoreButton{
+    float: left;
+    height: 100%;
+    width: 50%;
+    font-size: 100%;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.scoreButton:hover{
+    cursor: pointer;
+}
+
+/*Opnieuw*/
+#restartButton{
+    background: #75ff7a;
+    color: #103000;
+}
+
+#restartButton:hover{
+    background: #b0ffb2;
+}
+
+#restartButton:active{
+    background: #103000;
+    color: #75ff7a;
+}
+
+/*Afsluiten*/
+#closeButton{
+    background: #ff6969;
+    color: #340000;
+}
+
+#closeButton:hover{
+    background: #ff9d9d;
+}
+
+#closeButton:active{
+    background: #340000;
+    color: #ff6969;
+}
+
+/*====================================================================================================================*/
+
+/*Scores table*/
+#scoresTable{
+    float: left;
+    width: 85%;
+    margin: 2.5% auto auto 7.5%; /*Top right bottom left*/
+    background: #d2d2d2;
+    font-family: Arial, sans-serif;
+    border: 1px solid black;
+}
+
+#scoresTable th{
+    background: rgb(175, 175, 175);
+    border: 1px solid black;
+}
+
+#scoresTable td{
+    font-size: 90%;
+    border: 1px solid black;
+}
+
+.placeCell{
+    /*background: rgb(200, 200, 200);*/
+    background: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.naamCell{
+    /*background: rgb(225, 225, 225);*/
+    background: white;
+}
+
+.tijdCell{
+    /*background: rgb(255, 255, 255);*/
+    background: white;
+}
+
+
+/*Score spans*/
+#timeTotal{
+    text-decoration: underline;
+}
+
+#scoreAdded{
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 125%;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+/*====================================================================================================================*/
+/*====================================================================================================================*/
+/*====================================================================================================================*/

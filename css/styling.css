@@ -1,0 +1,462 @@
+/*Algemeen*/
+* {
+    box-sizing: border-box;
+}
+
+.mainText{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.subText{
+    font-weight: bold;
+    font-size: 85%;
+}
+
+.error{
+    color: red;
+}
+
+/*==================================================================================*/
+
+/*mainWrapper*/
+#mainWrapper{
+    float: left;
+    width: 100%; /*Canvas - horizontaal*/
+    height: 100%; /*Canvas - verticaal*/
+    z-index: -1;
+    border: 1px solid black;
+}
+
+/*==================================================================================*/
+
+/*Header*/
+#headerWrapper{
+    float: left;
+    height: 10%;
+    width: 100%;
+    background: #d4d4d4;
+    border: 4px solid black;
+}
+
+/*levelInfo*/
+#levelInfo{
+    float: left;
+    width: 25%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+#currentLevel{
+    float: left;
+    width: 100%;
+    height: 67.5%;
+    padding-left: 10px;
+    background: #eeeeee;
+    font-family: "Arial Black", sans-serif;
+    font-size: 225%;
+    border: 1px solid black;
+    border-left: 15px solid #292929;
+}
+
+#timerWrapper{
+    float: left;
+    height: 32.5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #d9d9d9;
+    font-family: "Lucida Console", serif;
+    font-size: 125%;
+    border: 1px solid black;
+}
+
+#timerPrefix{
+    float: left;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+#timerTime{
+    float: left;
+    height: 100%;
+    width: 35%;
+    padding-left: 10px;
+    background: #eeeeee;
+    border: 1px solid grey;
+}
+
+#timerSuffix{
+    float: left;
+    width: 45%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+
+/*titleLevelWrapper*/
+#titleLevelWrapper{
+    float: left;
+    height: 100%;
+    width: 75%;
+    border: 1px solid black;
+}
+
+#titleDiv{
+    float: left;
+    width: 100%;
+    height: 45%;
+    border: 1px solid black;
+}
+
+
+/*Gameprogress*/
+#gameProgress{
+    float: left;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+#gameProgressTable{
+    width: 100%;
+    height: 100%;
+    font-family: "Arial", sans-serif;
+    border: 1px solid black;
+}
+
+#gameProgressTable th{
+    line-height: 200%;
+    background: #c4c4c4;
+    font-size: 100%;
+    text-decoration: underline;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+#gameProgressTable td{
+    line-height: 150%;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.levelDone{
+    background: green;
+}
+
+.levelActive{
+    width: 50%;
+    background: #ff8c00;
+}
+
+.levelActiveIndicator{
+    text-decoration: underline;
+}
+
+.levelTodo{
+    background: red;
+}
+
+.finalTime{
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/*==================================================================================*/
+
+/*bodyWrapper*/
+#bodyWrapper{
+    float: left;
+    height: 80%;
+    width: 100%;
+    background: blue; /*TODO*/
+}
+
+/*==================================================================================*/
+
+/*playingArea*/
+#playingArea{
+    float: left;
+    width: 45%;
+    height: 100%;
+    text-align: center;
+    border-left: 3px solid black;
+}
+
+
+/*startingArea*/
+#startingArea{
+    float: left;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../backgrounds/kade.png");
+    border-right: 3px solid black;
+}
+
+#startingAreaSpawn{
+    float: left;
+    height: 75%;
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr); /*Horizontaal*/
+    grid-template-rows: repeat(25, 1fr); /*Verticaal*/
+    border: 1px dashed grey;
+}
+
+
+/*Forbidden areas - algemeen*/
+.forbiddenArea{
+    /*background: #1f5eff;*/
+}
+
+/*Forbidden area - water tussen kant en boot*/
+.forbiddenAreaInbetween{
+    float: left;
+    width: 10%;
+    height: 100%;
+}
+
+
+/*finishingArea*/
+#finishingAreaBackground{
+    float: right;
+    height: 100%;
+    width: 40%;
+    background: url("../backgrounds/boat.png") no-repeat bottom;
+    background-size: 100% 135%;
+}
+
+/*Forbidden areas - finishing area*/
+.forbiddenAreaFinishingArea{
+    float: left;
+    width: 100%;
+    height: 35%;
+}
+
+/*Finishing area - boot*/
+#finishingArea{
+    float: left;
+    height: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(123, 255, 126, 0.35); /*TODO*/
+    border: 3px solid rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+}
+
+#finishingAreaSpawn{
+    float: left;
+    height: 75%;
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr); /*Horizontaal*/
+    grid-template-rows: repeat(20, 1fr); /*Verticaal*/
+}
+
+
+/*Empty area*/
+#emptyArea{
+    float: left;
+    width: 55%; /*PlayingArea = 45%, 100-45 = 55%*/
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: #1f5eff;*/
+    border-right: 3px solid black;
+}
+
+/*Hint-area*/
+#hintArea{
+    float: left;
+    height: 60%;
+    width: 75%;
+    background: white;
+    overflow: auto;
+    font-family: "Lucida Console", sans-serif;
+    font-size: 90%;
+    padding: 10px 0 0 10px; /*top right bottom left*/
+    border: 3px solid black;
+}
+
+/*Hints*/
+.originalContainer{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.conditionContainer{
+    font-weight: bold;
+}
+
+/*==================================================================================*/
+
+/*Moveable elements - algemeen*/
+.draggableElement{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /*border: 1px solid black;*/
+}
+
+/*Collision DIV*/
+.collisionDetection{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.collisionDetection p{
+    color: black;
+    font-family: Arial, serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/*==================================================================================*/
+
+/*Bottom-area*/
+#bottomArea{
+    float: left;
+    height: 10%;
+    width: 100%;
+    border: 3px solid black;
+}
+
+#buttonDiv{
+    float: left;
+    height: 100%;
+    width: 25%;
+    border: 1px solid black;
+}
+
+/*Finished button*/
+#finishedButton{
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: #61ade3;
+    color: #191947;
+    font-size: 175%;
+    font-family: "Arial Black", sans-serif;
+    font-weight: bold;
+}
+
+#finishedButton:hover{
+    cursor: pointer;
+    background: #7dbeec;
+    text-decoration: underline;
+}
+
+#finishedButton:active{
+    background: #0f3c5b;
+    color: #7dbeec;
+}
+
+#finishedButton:disabled{
+    background: #0f3c5b;
+    color: #7dbeec;
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+
+/*Status-div*/
+#statusDiv{
+    float: left;
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial Black", sans-serif;
+    font-size: 125%;
+    border: 1px solid black;
+}
+
+.resultSuccess{
+    background: #b5e0b5;
+}
+
+.resultError{
+    background: #eab9b9;
+}
+
+.successSpan{
+    font-size: 125%;
+    font-weight: bold;
+    color: darkgreen;
+}
+
+.errorSpan{
+    font-size: 125%;
+    font-weight: bold;
+    color: darkred;
+}
+
+
+/*Bottom - reset buttons*/
+#bottomButtonDiv{
+    float: left;
+    width: 20%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+/*Reset buttons*/
+.resetButton{
+    float: left;
+    width: 50%;
+    height: 100%;
+    font-size: 125%;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.resetButton:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*Reset level*/
+#resetLevelButton{
+    background: #fc7575;
+    color: #5b0000;
+}
+
+#resetLevelButton:hover{
+    background: #ff9999;
+}
+
+#resetLevelButton:active{
+    background: #660000;
+    color: #f59292;
+}
+
+/*Reset game*/
+#resetGameButton{
+    background: #ff5e5e;
+    color: #5b0000;
+}
+
+#resetGameButton:hover{
+    background: #ff8585;
+}
+
+#resetGameButton:active{
+    background: #4a0000;
+    color: #f88686;
+}
