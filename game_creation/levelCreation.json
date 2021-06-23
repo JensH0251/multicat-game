@@ -1,0 +1,169 @@
+{
+  "level1": {
+    "reset": false,
+    "removeElements": [
+
+    ],
+    "areas": {
+      "startingAreaSpawn": [
+        {
+          "elementID": "1",
+          "cssValues": {
+            "background": "#00ff29",
+            "grid-column-start": "1",
+            "grid-column-end": "4",
+            "grid-row-start": "4",
+            "grid-row-end": "24"
+          }
+        },
+        {
+          "elementID": "2",
+          "cssValues": {
+            "background": "#00ffff",
+            "grid-column-start": "10",
+            "grid-column-end": "15",
+            "grid-row-start": "3",
+            "grid-row-end": "8"
+          }
+        },
+        {
+          "elementID": "3",
+          "cssValues": {
+            "background": "#0066ff",
+            "grid-column-start": "5",
+            "grid-column-end": "8",
+            "grid-row-start": "2",
+            "grid-row-end": "15"
+          }
+        },
+        {
+          "elementID": "4",
+          "cssValues": {
+            "background": "#ff0900",
+            "grid-column-start": "11",
+            "grid-column-end": "14",
+            "grid-row-start": "13",
+            "grid-row-end": "20"
+          }
+        }
+      ],
+      "finishingAreaSpawn": [
+
+      ]
+    },
+    "finishingConditions": {
+      "nextTo": {
+        "1": ["2"],
+        "2": ["1"],
+        "3": ["2", "4"],
+        "4": ["3"]
+      },
+      "notNextTo": {
+        "1": ["3", "4"],
+        "2": ["4"],
+        "3": ["1"],
+        "4": ["1", "2"]
+      },
+      "inArea": {
+        "1": "finishingArea",
+        "2": "finishingArea",
+        "3": "finishingArea",
+        "4": "finishingArea"
+      }
+    }
+  },
+
+  "level2": {
+    "reset": false,
+    "removeElements": [
+
+    ],
+    "areas": {
+      "startingAreaSpawn": [
+        {
+          "elementID": "5",
+          "cssValues": {
+            "background": "#8c34eb",
+            "grid-column-start": "1",
+            "grid-column-end": "9",
+            "grid-row-start": "1",
+            "grid-row-end": "5"
+          }
+        }
+      ],
+      "finishingAreaSpawn": [
+
+      ]
+    },
+    "finishingConditions": {
+      "nextTo": {
+        "1": ["2", "5"],
+        "2": ["1", "3"],
+        "3": ["2", "5"],
+        "4": [],
+        "5": ["1", "3"]
+      },
+      "notNextTo": {
+        "1": ["3"],
+        "2": ["5"],
+        "3": ["1"],
+        "4": ["1", "2", "3", "5"],
+        "5": ["2"]
+      },
+      "inArea": {
+        "1": "finishingArea",
+        "2": "finishingArea",
+        "3": "finishingArea",
+        "4": "startingArea",
+        "5": "finishingArea"
+      }
+    }
+  },
+
+  "level3": {
+    "reset": false,
+    "removeElements": [
+      "4"
+    ],
+    "areas": {
+      "startingAreaSpawn": [
+        {
+          "elementID": "6",
+          "cssValues": {
+            "background": "#ffe100",
+            "grid-column-start": "5",
+            "grid-column-end": "7",
+            "grid-row-start": "7",
+            "grid-row-end": "12"
+          }
+        }
+      ],
+      "finishingAreaSpawn": [
+
+      ]
+    },
+    "finishingConditions": {
+      "nextTo": {
+        "1": ["2", "5"],
+        "2": ["1", "3"],
+        "3": ["2", "5"],
+        "5": ["1", "3"],
+        "6": ["5"]
+      },
+      "notNextTo": {
+        "1": ["3"],
+        "2": ["5"],
+        "3": ["1"],
+        "5": ["2"],
+        "6": ["1", "2", "3"]
+      },
+      "inArea": {
+        "1": "finishingArea",
+        "2": "finishingArea",
+        "3": "finishingArea",
+        "5": "finishingArea",
+        "6": "finishingArea"
+      }
+    }
+  }
+}

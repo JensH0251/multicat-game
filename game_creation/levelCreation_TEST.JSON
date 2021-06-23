@@ -1,0 +1,72 @@
+{
+  "level1": {
+    "reset": false,
+    "removeElements": [
+
+    ],
+    "areas": {
+      "startingAreaSpawn": [
+        {
+          "elementID": "1",
+          "cssValues": {
+            "background": "#00ff29",
+            "grid-column-start": "1",
+            "grid-column-end": "4",
+            "grid-row-start": "4",
+            "grid-row-end": "24"
+          }
+        }
+      ],
+      "finishingAreaSpawn": [
+
+      ]
+    },
+    "finishingConditions": {
+      "nextTo": {
+
+      },
+      "notNextTo": {
+
+      },
+      "inArea": {
+        "1": "finishingArea"
+      }
+    }
+  },
+
+  "level2": {
+    "reset": false,
+    "removeElements": [
+
+    ],
+    "areas": {
+      "startingAreaSpawn": [
+        {
+          "elementID": "2",
+          "cssValues": {
+            "background": "#00ffff",
+            "grid-column-start": "10",
+            "grid-column-end": "15",
+            "grid-row-start": "3",
+            "grid-row-end": "8"
+          }
+        }
+      ],
+      "finishingAreaSpawn": [
+
+      ]
+    },
+    "finishingConditions": {
+      "nextTo": {
+
+      },
+      "notNextTo": {
+
+      },
+      "inArea": {
+        "1": "finishingArea",
+        "2": "finishingArea"
+      }
+    }
+  }
+}
